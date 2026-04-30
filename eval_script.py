@@ -38,7 +38,7 @@ def evaluate_results(results_file):
         if any(std in expected for std in top_3_retrieved):
             hits_at_3 += 1
 
-        # 2. Calculate MRR @5 (Mean Reciprocal Rank of first correct standard in top 5)
+        # 2. Calculate MRR @5 (Mean Reciprocal Rank of first correct standard in top 5).
         top_5_retrieved = retrieved[:5]
         mrr = 0.0
         for rank, std in enumerate(top_5_retrieved, start=1):
